@@ -5,47 +5,24 @@ import Colors from "@/constants/Colors";
 
 const Header = () => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.black }}>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: 70,
-          paddingHorizontal: 20,
-        }}
-      >
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.wrapper}>
+        <View style={styles.userInfoWrapper}>
           <Image
             source={{
               uri: "https://i.pravatar.cc/250?u=12",
             }}
-            style={{ height: 50, width: 50, borderRadius: 30 }}
+            style={styles.userImg}
           />
-          <View style={{ marginLeft: 10 }}>
-            <Text style={{ color: Colors.white, fontSize: 12 }}>Hi, Jenny</Text>
-            <Text style={{ color: Colors.white, fontSize: 16 }}>
-              Your <Text style={{ fontWeight: "700" }}>Budget</Text>
+          <View style={styles.userTextWrapper}>
+            <Text style={[styles.userText, { fontSize: 12 }]}>Hi, Jenny</Text>
+            <Text style={[styles.userText, { fontSize: 16 }]}>
+              Your <Text style={styles.boldText}>Budget</Text>
             </Text>
           </View>
         </View>
-        <TouchableOpacity
-          onPress={() => {}}
-          style={{
-            borderColor: "#666",
-            borderWidth: 1,
-            padding: 8,
-            borderRadius: 10,
-          }}
-        >
-          <Text
-            style={{
-              color: Colors.white,
-              fontSize: 12,
-            }}
-          >
-            My Transactions
-          </Text>
+        <TouchableOpacity onPress={() => {}} style={styles.btnWrapper}>
+          <Text style={styles.btnText}>My Transactions</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -54,4 +31,28 @@ const Header = () => {
 
 export default Header;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: Colors.black },
+  wrapper: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: 70,
+    paddingHorizontal: 20,
+  },
+  userInfoWrapper: { flexDirection: "row", alignItems: "center" },
+  userTextWrapper: { marginLeft: 10 },
+  userImg: { height: 50, width: 50, borderRadius: 30 },
+  userText: { color: Colors.white },
+  boldText: { fontWeight: "700" },
+  btnWrapper: {
+    borderColor: "#666",
+    borderWidth: 1,
+    padding: 8,
+    borderRadius: 10,
+  },
+  btnText: {
+    color: Colors.white,
+    fontSize: 12,
+  },
+});
