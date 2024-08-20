@@ -16,7 +16,7 @@ const ExpenseBlock = () => {
   const staticItem = [{ name: "Add Item" }];
 
   return (
-    <View style={{ paddingVertical: 20 }}>
+    <View style={{ marginVertical: 20 }}>
       <FlatList
         data={staticItem.concat(ExpenseList)}
         renderItem={RenderItem}

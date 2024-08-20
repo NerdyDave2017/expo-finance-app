@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Expenses from "@/components/Expenses";
 import ExpenseBlock from "@/components/ExpenseBlock";
 import IncomeBlock from "@/components/IncomeBlock";
+import SpendingBlock from "@/components/SpendingBlock";
 
 const Page = () => {
   return (
@@ -20,6 +21,7 @@ const Page = () => {
           <Expenses />
           <ExpenseBlock />
           <IncomeBlock />
+          <SpendingBlock />
         </ScrollView>
       </View>
     </>
@@ -33,6 +35,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.black,
     paddingHorizontal: 20,
-    paddingTop: Platform.OS === "ios" ? 40 : 70,
+    paddingTop: Platform.OS === "ios" ? 40 : 90,
   },
 });

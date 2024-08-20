@@ -17,7 +17,7 @@ import { Feather } from "@expo/vector-icons";
 
 const IncomeBlock = () => {
   return (
-    <View>
+    <View style={{ marginVertical: 20 }}>
       <Text style={{ color: Colors.white, fontSize: 16, marginBottom: 20 }}>
         My <Text style={{ fontWeight: 700 }}>Income</Text>
       </Text>
